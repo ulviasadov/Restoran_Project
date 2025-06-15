@@ -1,4 +1,6 @@
-﻿<div class="preloader">
+﻿@model HomeIndexViewModel
+
+<div class="preloader">
     <div class="spinner">
         <div class="bounce1"></div>
         <div class="bounce2"></div>
@@ -934,7 +936,7 @@
                             combined with an open kitchen, coffee take out bar and on site coffee roastery.
                         </p>
                         <div class="signiture--img mt-30">
-                            <img src="~/images/heading/Signiture.html" alt="Signiture img">
+                            <img src="/images/heading/Signiture.html" alt="Signiture img">
                         </div>
                     </div>
                     <!-- .heading end -->
@@ -1801,144 +1803,40 @@
                     <div id="testimonial-carousel" class="carousel carousel-dots carousel-white" data-slide="3"
                          data-slide-rs="1" data-autoplay="false" data-nav="false" data-dots="true" data-space="30"
                          data-loop="true" data-speed="800">
-                        <!-- Testimonial #1 -->
-                        <div class="testimonial-container">
+                        @foreach(var customer in Model.Customers)
+                        {
+                            <!-- Testimonial #1 -->
+                            <div class="testimonial-container">
 
-                            <div class="testimonial-panel">
-                                <div class="testimonial-bordered">
-                                    <div class="testimonial--rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <!-- .testimonial-rating end -->
-                                    <div class="testimonial--body">
-                                        <p>
-                                            “ Steak In is simply the best. Great Food, nice atmosphere and very
-                                            reasonable prices. It just doesn't get any better ”
-                                        </p>
-                                    </div>
-                                    <!-- .testimonial-body end -->
-                                    <div class="testimonial--meta">
-                                        <div class="testimonial--img">
-                                            <img src="~/images/testimonial/1.png" alt="Testimonial Author">
+                                <div class="testimonial-panel">
+                                    <div class="testimonial-bordered">
+                                        <div class="testimonial--rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
                                         </div>
-                                        <div class="testimonial--author">
-                                            <h4>Michael Luke</h4>
+                                        <!-- .testimonial-rating end -->
+                                        <div class="testimonial--body">
+                                            <p>@customer.Comment</p>
                                         </div>
+                                        <!-- .testimonial-body end -->
+                                        <div class="testimonial--meta">
+                                            <div class="testimonial--img">
+                                                <img src="@customer.ImageUrl" alt="Testimonial Author">
+                                            </div>
+                                            <div class="testimonial--author">
+                                                <h4>@customer.Name @customer.Surname</h4>
+                                            </div>
+                                        </div>
+                                        <!-- .testimonial-meta end -->
                                     </div>
-                                    <!-- .testimonial-meta end -->
                                 </div>
+                                <!-- .testimonial-panel end -->
+                                <div class="divider--shape-1up"></div>
                             </div>
-                            <!-- .testimonial-panel end -->
-                            <div class="divider--shape-1up"></div>
-                        </div>
-                        <!-- Testimonial #2 -->
-                        <div class="testimonial-container">
-
-                            <div class="testimonial-panel">
-                                <div class="testimonial-bordered">
-                                    <div class="testimonial--rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <!-- .testimonial-rating end -->
-                                    <div class="testimonial--body">
-                                        <p>
-                                            “ We've been to Steak In many times over the years. We know what to
-                                            expect: great food and awesome prices ”
-                                        </p>
-                                    </div>
-                                    <!-- .testimonial-body end -->
-                                    <div class="testimonial--meta">
-                                        <div class="testimonial--img">
-                                            <img src="~/images/testimonial/2.png" alt="Testimonial Author">
-                                        </div>
-                                        <div class="testimonial--author">
-                                            <h4>Henry Gabriel</h4>
-                                        </div>
-                                    </div>
-                                    <!-- .testimonial-meta end -->
-                                </div>
-
-                            </div>
-                            <!-- .testimonial-panel end -->
-                            <div class="divider--shape-1up"></div>
-                        </div>
-                        <!-- Testimonial #3 -->
-                        <div class="testimonial-container">
-
-                            <div class="testimonial-panel">
-                                <div class="testimonial-bordered">
-                                    <div class="testimonial--rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <!-- .testimonial-rating end -->
-                                    <div class="testimonial--body">
-                                        <p>
-                                            “ The reasonable prices, the great atmosphere are only topped by the
-                                            delicious food. Keep up the great work ”
-                                        </p>
-                                    </div>
-                                    <!-- .testimonial-body end -->
-                                    <div class="testimonial--meta">
-                                        <div class="testimonial--img">
-                                            <img src="~/images/testimonial/3.png" alt="Testimonial Author">
-                                        </div>
-                                        <div class="testimonial--author">
-                                            <h4>Leo Jaxon</h4>
-                                        </div>
-                                    </div>
-                                    <!-- .testimonial-meta end -->
-                                </div>
-
-                            </div>
-                            <!-- .testimonial-panel end -->
-                            <div class="divider--shape-1up"></div>
-                        </div>
-                        <!-- Testimonial #4 -->
-                        <div class="testimonial-container">
-
-                            <div class="testimonial-panel">
-                                <div class="testimonial-bordered">
-                                    <div class="testimonial--rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <!-- .testimonial-rating end -->
-                                    <div class="testimonial--body">
-                                        <p>
-                                            “ Steak In is simply the best. Great Food, nice atmosphere and very
-                                            reasonable prices. It just doesn't get any better ”
-                                        </p>
-                                    </div>
-                                    <!-- .testimonial-body end -->
-                                    <div class="testimonial--meta">
-                                        <div class="testimonial--img">
-                                            <img src="~/images/testimonial/4.png" alt="Testimonial Author">
-                                        </div>
-                                        <div class="testimonial--author">
-                                            <h4>Anthony Hunter</h4>
-                                        </div>
-                                    </div>
-                                    <!-- .testimonial-meta end -->
-                                </div>
-                            </div>
-                            <!-- .testimonial-panel end -->
-                            <div class="divider--shape-1up"></div>
-                        </div>
+                        }
                     </div>
                 </div>
                 <!-- .col-md-12 end -->
@@ -1965,130 +1863,40 @@
             </div>
             <!-- .row end -->
             <div class="row">
-                <!-- Member #1 -->
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="member">
-                        <div class="member-img">
-                            <img src="~/images/team/1.jpg" alt="member">
-                            <div class="member-overlay">
-                                <div class="member-hover">
-                                    <div class="pos-vertical-center">
-                                        <div class="member-social">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                @foreach (var chef in Model.Chefs)
+                {
+                    <!-- Member #1 -->
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="member">
+                            <div class="member-img">
+                                <img src="@chef.ImageUrl" alt="member">
+                                <div class="member-overlay">
+                                    <div class="member-hover">
+                                        <div class="pos-vertical-center">
+                                            <div class="member-social">
+                                                <a href="@chef.FacebookUrl"><i class="fa fa-facebook"></i></a>
+                                                <a href="@chef.TwitterUrl"><i class="fa fa-twitter"></i></a>
+                                                <a href="@chef.InstagramUrl"><i class="fa fa-instagram"></i></a>
+                                            </div>
+                                            <!-- .memebr-social end -->
                                         </div>
-                                        <!-- .memebr-social end -->
+                                        <!-- .pos-vertical-center end -->
                                     </div>
-                                    <!-- .pos-vertical-center end -->
+                                    <!-- .memebr-hover end -->
                                 </div>
-                                <!-- .memebr-hover end -->
+                                <!-- .memebr-ovelay end -->
                             </div>
-                            <!-- .memebr-ovelay end -->
-                        </div>
-                        <!-- .member-img end -->
-                        <div class="member-info">
-                            <h5>James Carter</h5>
-                            <h6>CEO & Founder</h6>
-                        </div>
-                        <!-- .member-info end -->
-                    </div>
-                    <!-- .member end -->
-                </div>
-                <!-- .col-md-3 end -->
-                <!-- Member #2 -->
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="member">
-                        <div class="member-img">
-                            <img src="~/images/team/2.jpg" alt="member">
-                            <div class="member-overlay">
-                                <div class="member-hover">
-                                    <div class="pos-vertical-center">
-                                        <div class="member-social">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-instagram"></i></a>
-                                        </div>
-                                        <!-- .memebr-social end -->
-                                    </div>
-                                    <!-- .pos-vertical-center end -->
-                                </div>
-                                <!-- .memebr-hover end -->
+                            <!-- .member-img end -->
+                            <div class="member-info">
+                                <h5>@chef.Name @chef.Surname</h5>
+                                <h6>@chef.Description</h6>
                             </div>
-                            <!-- .memebr-ovelay end -->
+                            <!-- .member-info end -->
                         </div>
-                        <!-- .member-img end -->
-                        <div class="member-info">
-                            <h5>Adam Smith</h5>
-                            <h6>Master Chef</h6>
-                        </div>
-                        <!-- .member-info end -->
+                        <!-- .member end -->
                     </div>
-                    <!-- .member end -->
-                </div>
-                <!-- .col-md-3 end -->
-                <!-- Member #3 -->
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="member">
-                        <div class="member-img">
-                            <img src="~/images/team/3.jpg" alt="member">
-                            <div class="member-overlay">
-                                <div class="member-hover">
-                                    <div class="pos-vertical-center">
-                                        <div class="member-social">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-instagram"></i></a>
-                                        </div>
-                                        <!-- .memebr-social end -->
-                                    </div>
-                                    <!-- .pos-vertical-center end -->
-                                </div>
-                                <!-- .memebr-hover end -->
-                            </div>
-                            <!-- .memebr-ovelay end -->
-                        </div>
-                        <!-- .member-img end -->
-                        <div class="member-info">
-                            <h5>Gene Stevens</h5>
-                            <h6>Thai Master Chef</h6>
-                        </div>
-                        <!-- .member-info end -->
-                    </div>
-                    <!-- .member end -->
-                </div>
-                <!-- .col-md-3 end -->
-                <!-- Member #4 -->
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="member">
-                        <div class="member-img">
-                            <img src="~/images/team/4.jpg" alt="member">
-                            <div class="member-overlay">
-                                <div class="member-hover">
-                                    <div class="pos-vertical-center">
-                                        <div class="member-social">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-instagram"></i></a>
-                                        </div>
-                                        <!-- .memebr-social end -->
-                                    </div>
-                                    <!-- .pos-vertical-center end -->
-                                </div>
-                                <!-- .memebr-hover end -->
-                            </div>
-                            <!-- .memebr-ovelay end -->
-                        </div>
-                        <!-- .member-img end -->
-                        <div class="member-info">
-                            <h5>Walter Adler</h5>
-                            <h6>Chinese Master Chef</h6>
-                        </div>
-                        <!-- .member-info end -->
-                    </div>
-                    <!-- .member end -->
-                </div>
-                <!-- .col-md-3 end -->
+                    <!-- .col-md-3 end -->
+                }
             </div>
         </div>
     </section>
@@ -2274,64 +2082,36 @@
                     <div id="testimonial-wide" class="carousel carousel-dots" data-slide="1" data-slide-rs="1"
                          data-autoplay="false" data-nav="false" data-dots="true" data-space="0" data-loop="true"
                          data-speed="800">
-                        <!-- Testimonial #1 -->
-                        <div class="testimonial-panel">
-                            <div class="testimonial--rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <!-- .testimonial-rating end -->
-                            <div class="testimonial--body">
-                                <p>
-                                    We're all moving at such a high rate that we have to grab the frozen dinners, we
-                                    can't make it a way of life. We have to get back to real, simple, clean good
-                                    foods
-                                </p>
-                            </div>
-                            <!-- .testimonial-body end -->
-                            <div class="testimonial--meta">
-                                <div class="testimonial--img">
-                                    <img src="~/images/testimonial/1.png" alt="Testimonial Author">
+                        @for(int i = 0; i < 2; i++)
+                        {
+                            <!-- Testimonial #@i -->
+                            <div class="testimonial-panel">
+                                <div class="testimonial--rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
                                 </div>
-                                <div class="testimonial--author">
-                                    <h4>Michael Luke</h4>
+                                <!-- .testimonial-rating end -->
+                                <div class="testimonial--body">
+                                    <p>
+                                        @Model.Customers[i].Comment
+                                    </p>
                                 </div>
-                            </div>
-                            <!-- .testimonial-meta end -->
-                        </div>
-                        <!-- .testimonial-panel end -->
-                        <!-- Testimonial #2 -->
-                        <div class="testimonial-panel">
-                            <div class="testimonial--rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <!-- .testimonial-rating end -->
-                            <div class="testimonial--body">
-                                <p>
-                                    We're all moving at such a high rate that we have to grab the frozen dinners, we
-                                    can't make it a way of life. We have to get back to real, simple, clean good
-                                    foods
-                                </p>
-                            </div>
-                            <!-- .testimonial-body end -->
-                            <div class="testimonial--meta">
-                                <div class="testimonial--img">
-                                    <img src="~/images/testimonial/2.png" alt="Testimonial Author">
+                                <!-- .testimonial-body end -->
+                                <div class="testimonial--meta">
+                                    <div class="testimonial--img">
+                                        <img src="@Model.Customers[i].ImageUrl" alt="Testimonial Author">
+                                    </div>
+                                    <div class="testimonial--author">
+                                        <h4>@Model.Customers[i].Name @Model.Customers[i].Surname</h4>
+                                    </div>
                                 </div>
-                                <div class="testimonial--author">
-                                    <h4>Henry Gabriel</h4>
-                                </div>
+                                <!-- .testimonial-meta end -->
                             </div>
-                            <!-- .testimonial-meta end -->
-                        </div>
-                        <!-- .testimonial-panel end -->
+                            <!-- .testimonial-panel end -->
+                        }
                     </div>
                 </div>
                 <!-- .col-md-12 end -->
