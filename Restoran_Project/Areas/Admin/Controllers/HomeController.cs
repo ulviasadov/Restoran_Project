@@ -7,6 +7,11 @@ namespace Restoran_Project.Areas.Admin.Controllers
     {
         public IActionResult Index()
         {
+            if (HttpContext.Session.GetString("AdminLogin") != "true")
+            {
+                return RedirectToAction("Index", "Login", new { area = "Admin" });
+            }
+
             return View();
         }
     }
